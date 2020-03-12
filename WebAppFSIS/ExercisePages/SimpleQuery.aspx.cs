@@ -8,7 +8,7 @@ using FSISSystem.BLL;
 using FSISSystem.ENTITIES;
 
 
-namespace WebApp.ExercisePages
+namespace WebAppFSIS.ExercisePages
 
 {
     public partial class SimpleQuery : System.Web.UI.Page
@@ -20,7 +20,7 @@ namespace WebApp.ExercisePages
 
         protected void Fetch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TeamArg.Text))
+            if (string.IsNullOrEmpty(TeamIDArg.Text))
             {
                 MessageLabel.Text = "Enter a team id value.";
             }
@@ -43,7 +43,7 @@ namespace WebApp.ExercisePages
                         else
                         {
                             TeamID.Text = info.TeamID.ToString();
-                            TeamDescription.Text = info.TeamDescription;
+                            TeamDescription.Text = info.TeamName;
                         }
                     }
                     else
